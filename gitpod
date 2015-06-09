@@ -30,6 +30,8 @@ if ( $cmd eq 'info' ) {
     fetch($1);
 } elsif ( $cmd =~ /^git-upload-pack (.+)$/ ) {
     upload($1);
+} elsif ( $cmd =~ /^list-repos$/ ) {
+    list_repos();
 } else {
     die "unknown command $cmd\n";
 }
